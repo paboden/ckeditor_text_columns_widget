@@ -1,0 +1,6 @@
+name = "CKEditor Column widget"
+description = "This module contains a collection of column widgets to add to the ckeditor wysiwyg setup."
+package = User interface
+core = 7.x
+
+stylesheets[all][] = css/styles.css

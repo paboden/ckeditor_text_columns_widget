@@ -1,0 +1,152 @@
+<?php
+
+/**
+ * Implements hook_ckeditor_plugin().
+ *
+ * @return type.
+ */
+function ckeditor_text_columns_widget_ckeditor_plugin() {
+  $plugins = array();
+
+  /* Example plugin declaration
+  $plugins['name-of-widget'] = array(
+
+    //Set the machine name of your widget
+    'name' => 'name-of-widget',
+    'desc' => t('Description'),
+    'path' => drupal_get_path('module', 'name_of_module') . '/plugins/name-of-widget/',
+    'buttons' => array(
+      'Button-name' => array('label' => 'Label for Widget', 'icon' => 'icons/name-of-widget.png'),
+    )
+  );
+  */
+
+  $plugins['two-column'] = array(
+    'name' => 'two-column',
+    'desc' => t('Two columns.'),
+    'path' => drupal_get_path('module', 'ckeditor_text_columns_widget') . '/plugins/two-column/',
+    'buttons' => array(
+      'Two-column' => array('label' => 'Two Columns', 'icon' => 'icons/two-column.png'),
+    )
+  );
+
+  $plugins['three-column'] = array(
+    'name' => 'three-column',
+    'desc' => t('Three columns.'),
+    'path' => drupal_get_path('module', 'ckeditor_text_columns_widget') . '/plugins/three-column/',
+    'buttons' => array(
+      'Three-column' => array('label' => 'Three Columns', 'icon' => 'icons/three-column.png'),
+    )
+  );
+
+  $plugins['four-column'] = array(
+    'name' => 'four-column',
+    'desc' => t('Four columns.'),
+    'path' => drupal_get_path('module', 'ckeditor_text_columns_widget') . '/plugins/four-column/',
+    'buttons' => array(
+      'Four-column' => array('label' => 'Four Columns', 'icon' => 'icons/four-column.png'),
+    )
+  );
+
+  $plugins['five-column'] = array(
+    'name' => 'five-column',
+    'desc' => t('Five columns.'),
+    'path' => drupal_get_path('module', 'ckeditor_text_columns_widget') . '/plugins/five-column/',
+    'buttons' => array(
+      'Five-column' => array('label' => 'Five Columns', 'icon' => 'icons/five-column.png'),
+    )
+  );
+
+  $plugins['six-column'] = array(
+    'name' => 'six-column',
+    'desc' => t('Six columns.'),
+    'path' => drupal_get_path('module', 'ckeditor_text_columns_widget') . '/plugins/six-column/',
+    'buttons' => array(
+      'Six-column' => array('label' => 'Six Columns', 'icon' => 'icons/six-column.png'),
+    )
+  );
+
+  return $plugins;
+}
+
+/**
+ * Implements hook_wysiwyg_plugin().
+ *
+ * @return type.
+ */
+function ckeditor_text_columns_widget_wysiwyg_plugin($editor, $version) {
+  switch ($editor) {
+    case 'ckeditor':
+      if ($version > 4) {
+        $plugins = array();
+
+        /* Example plugin declaration
+        $plugins['name-of-widget'] = array(
+          //Set the machine name of your widget
+          'path' => drupal_get_path('module', 'name_of_module') . '/plugins/name-of-widget/',
+          'filename' => 'plugin.js',
+          'load' => TRUE,
+          'buttons' => array(
+            'Button-name' => t('Label for Widget),
+          )
+        );
+        */
+
+        $plugins['two_column'] = array(
+          'path' => drupal_get_path('module', 'ckeditor_text_columns_widget') . '/plugins/two_column',
+          'filename' => 'plugin.js',
+          'load' => TRUE,
+          'buttons' => array(
+            'Two-column' => t('Two Column'),
+          ),
+        );
+
+        $plugins['three_column'] = array(
+          'path' => drupal_get_path('module', 'ckeditor_text_columns_widget') . '/plugins/three_column',
+          'filename' => 'plugin.js',
+          'load' => TRUE,
+          'buttons' => array(
+            'Three-column' => t('Three Column'),
+          ),
+        );
+
+        $plugins['four_column'] = array(
+          'path' => drupal_get_path('module', 'ckeditor_text_columns_widget') . '/plugins/four_column',
+          'filename' => 'plugin.js',
+          'load' => TRUE,
+          'buttons' => array(
+            'Four-column' => t('Four Column'),
+          ),
+        );
+
+        $plugins['five_column'] = array(
+          'path' => drupal_get_path('module', 'ckeditor_text_columns_widget') . '/plugins/five_column',
+          'filename' => 'plugin.js',
+          'load' => TRUE,
+          'buttons' => array(
+            'Five-column' => t('Five Column'),
+          ),
+        );
+
+        $plugins['six_column'] = array(
+          'path' => drupal_get_path('module', 'ckeditor_text_columns_widget') . '/plugins/six_column',
+          'filename' => 'plugin.js',
+          'load' => TRUE,
+          'buttons' => array(
+            'Six-column' => t('Six Column'),
+          ),
+        );
+
+        $plugins['six_column'] = array(
+          'path' => drupal_get_path('module', 'ckeditor_text_columns_widget') . '/plugins/six_column',
+          'filename' => 'plugin.js',
+          'load' => TRUE,
+          'buttons' => array(
+            'six-column' => t('Six Column'),
+          ),
+        );
+      }
+      break;
+  }
+  return $plugins;
+}

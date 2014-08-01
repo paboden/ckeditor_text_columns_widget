@@ -1,0 +1,111 @@
+.c2,
+.c3,
+.c4,
+.c5,
+.c6 {
+  width: 100%;
+}
+
+.c2:after,
+.c3:after,
+.c4:after,
+.c5:after,
+.c6:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.c2 img,
+.c3 img,
+.c4 img,
+.c5 img,
+.c6 img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+/* 2 column */
+.c2-col1,
+.c2-col2 {
+  width: 49.9%;
+  float: left;
+}
+.c2-col1:after,
+.c2-col2:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+/* 3 column */
+.c3-col1,
+.c3-col2,
+.c3-col3 {
+  width: 33.3%;
+  float: left;
+}
+.c3-col1:after,
+.c3-col2:after,
+.c3-col3:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+/* 4 column */
+.c4-col1,
+.c4-col2,
+.c4-col3,
+.c4-col4 {
+  width: 24.95%;
+  float: left;
+}
+.c4-col1:after,
+.c4-col2:after,
+.c4-col3:after,
+.c4-col4:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+/* 5 column */
+.c5-col1,
+.c5-col2,
+.c5-col3,
+.c5-col4,
+.c5-col5 {
+  width: 19.95%;
+  float: left;
+}
+.c5-col1:after,
+.c5-col2:after,
+.c5-col3:after,
+.c5-col4:after,
+.c5-col5:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+/* 6 column */
+.c6-col1,
+.c6-col2,
+.c6-col3,
+.c6-col4,
+.c6-col5,
+.c6-col6 {
+  width: 16.62%;
+  float: left;
+}
+.c6-col1:after,
+.c6-col2:after,
+.c6-col3:after,
+.c6-col4:after,
+.c6-col5:after,
+.c6-col6:after {
+  display: table;
+  content: '';
+  clear: both;
+}
